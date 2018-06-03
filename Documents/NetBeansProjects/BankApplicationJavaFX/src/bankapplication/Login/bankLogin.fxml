@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="553.0" prefWidth="674.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bankapplication.Login.BankLoginController">
+   <children>
+      <BorderPane layoutX="-5.0" layoutY="9.0" prefHeight="546.0" prefWidth="678.0">
+         <center>
+            <StackPane alignment="TOP_LEFT" prefHeight="320.0" prefWidth="659.0" style="-fx-background-color: #82c79b;" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox prefHeight="246.0" prefWidth="697.0">
+                     <children>
+                        <JFXTextField fx:id="login_uname" alignment="CENTER" labelFloat="true" promptText="Enter UserName Here">
+                           <font>
+                              <Font name="System Bold Italic" size="17.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="200.0" right="200.0" top="30.0" />
+                           </VBox.margin>
+                        </JFXTextField>
+                        <JFXPasswordField fx:id="login_pass" alignment="CENTER" labelFloat="true" promptText="Enter Password Here">
+                           <font>
+                              <Font name="System Bold Italic" size="17.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="200.0" right="200.0" top="20.0" />
+                           </VBox.margin>
+                        </JFXPasswordField>
+                        <HBox alignment="CENTER" prefHeight="91.0" prefWidth="659.0">
+                           <children>
+                              <JFXButton fx:id="clearButton" onAction="#onClear" prefHeight="50.0" prefWidth="150.0" stylesheets="@banklogin.css" text="Clear" />
+                              <JFXButton fx:id="submitButton" layoutX="10.0" layoutY="10.0" onAction="#onSubmit" prefHeight="50.0" prefWidth="150.0" stylesheets="@banklogin.css" text="Submit">
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin>
+                              </JFXButton>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="40.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </StackPane>
+         </center>
+         <top>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="663.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="159.0" fitWidth="667.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/librarylogo.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" prefHeight="40.0" prefWidth="283.0" text="LOGIN HERE" textFill="#0c2c0f">
+                     <font>
+                        <Font name="Bodoni MT Bold" size="32.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </top>
+         <bottom>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #82c79b;" BorderPane.alignment="CENTER">
+               <children>
+                  <Label text="Forget Password ??" textFill="#c61111">
+                     <font>
+                        <Font name="Bodoni MT Italic" size="27.0" />
+                     </font>
+                  </Label>
+                  <JFXButton fx:id="forgetButton" onAction="#onForget" stylesheets="@banklogin.css" text="Click Here">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Calibri Bold Italic" size="16.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </HBox>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>

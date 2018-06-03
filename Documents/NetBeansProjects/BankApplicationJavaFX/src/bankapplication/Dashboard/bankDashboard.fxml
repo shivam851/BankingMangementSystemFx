@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="880.0" prefWidth="1056.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bankapplication.Dashboard.BankDashboardController">
+   <children>
+      <BorderPane prefHeight="880.0" prefWidth="1056.0">
+         <top>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #fdded3;" BorderPane.alignment="CENTER">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Bank MANAGEMENT SYSTEM" wrappingWidth="906.25732421875">
+                     <font>
+                        <Font name="Chiller" size="96.0" />
+                     </font>
+                  </Text>
+               </children>
+            </VBox>
+         </top>
+         <center>
+            <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+              <tabs>
+                <Tab text="Profile">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="465.0" layoutY="14.0" text="Customer Profile">
+                                 <font>
+                                    <Font name="System Bold Italic" size="37.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="138.0" layoutY="188.0" prefHeight="32.0" prefWidth="146.0" text="Name" />
+                              <Label layoutX="138.0" layoutY="220.0" prefHeight="32.0" prefWidth="146.0" text="Nationality" />
+                              <Label layoutX="138.0" layoutY="252.0" prefHeight="32.0" prefWidth="146.0" text="Address" />
+                              <Label layoutX="138.0" layoutY="284.0" prefHeight="32.0" prefWidth="146.0" text="A/C Type" />
+                              <Label layoutX="138.0" layoutY="316.0" prefHeight="32.0" prefWidth="146.0" text="DOB" />
+                              <Label layoutX="138.0" layoutY="348.0" prefHeight="32.0" prefWidth="146.0" text="Gender" />
+                              <Label layoutX="138.0" layoutY="380.0" prefHeight="32.0" prefWidth="146.0" text="A/c no " />
+                              <JFXTextField fx:id="profile_acc" labelFloat="true" layoutX="426.0" layoutY="97.0" prefHeight="31.0" prefWidth="216.0" promptText="Enter Account Number " />
+                              <JFXButton fx:id="SearchButton" layoutX="682.0" layoutY="91.0" onAction="#OnProfileSearch" prefHeight="40.0" prefWidth="88.0" stylesheets="@../Login/banklogin.css" text="Search " textFill="#f50a0a">
+                                 <font>
+                                    <Font name="System Bold" size="17.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXTextField fx:id="profileName" editable="false" layoutX="297.0" layoutY="189.0" prefHeight="31.0" prefWidth="502.0" />
+                              <JFXTextField fx:id="profileNationality" editable="false" layoutX="297.0" layoutY="221.0" prefHeight="31.0" prefWidth="502.0" />
+                              <JFXTextField fx:id="profileAddress" editable="false" layoutX="297.0" layoutY="253.0" prefHeight="31.0" prefWidth="502.0" />
+                              <JFXTextField fx:id="profileAcc" editable="false" layoutX="297.0" layoutY="285.0" prefHeight="31.0" prefWidth="502.0" />
+                              <JFXTextField fx:id="profileDob" editable="false" layoutX="297.0" layoutY="317.0" prefHeight="31.0" prefWidth="502.0" />
+                              <JFXTextField fx:id="profileGender" editable="false" layoutX="297.0" layoutY="349.0" prefHeight="31.0" prefWidth="502.0" />
+                              <JFXTextField fx:id="profileAccno" editable="false" layoutX="297.0" layoutY="381.0" prefHeight="31.0" prefWidth="502.0" />
+                              <Label layoutX="138.0" layoutY="412.0" prefHeight="32.0" prefWidth="146.0" text="Caste" />
+                              <Label layoutX="138.0" layoutY="445.0" prefHeight="32.0" prefWidth="146.0" text="Mobile no." />
+                              <Label layoutX="138.0" layoutY="477.0" prefHeight="32.0" prefWidth="146.0" text="Security question" />
+                              <JFXTextField fx:id="profileCaste" editable="false" layoutX="297.0" layoutY="413.0" prefHeight="31.0" prefWidth="502.0" />
+                              <JFXTextField fx:id="profileMob" editable="false" layoutX="297.0" layoutY="446.0" prefHeight="31.0" prefWidth="502.0" />
+                              <JFXTextField fx:id="profileSec" editable="false" layoutX="297.0" layoutY="478.0" prefHeight="31.0" prefWidth="502.0" />
+                              <JFXButton fx:id="editButton" layoutX="297.0" layoutY="537.0" onAction="#OnProfileEdit" prefHeight="44.0" prefWidth="230.0" stylesheets="@../Login/banklogin.css" text="Edit" textFill="#f20000">
+                                 <font>
+                                    <Font name="System Bold" size="19.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton fx:id="submitButton" layoutX="567.0" layoutY="537.0" onAction="#OnProfileSubmit" prefHeight="44.0" prefWidth="232.0" stylesheets="@../Login/banklogin.css" text="Submit" textFill="#ff1313">
+                                 <font>
+                                    <Font name="System Bold" size="19.0" />
+                                 </font>
+                              </JFXButton>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="Deposit">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="406.0" layoutY="35.0" text="Deposit Menu">
+                                 <font>
+                                    <Font name="System Bold Italic" size="37.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField fx:id="deposit_acc" labelFloat="true" layoutX="406.0" layoutY="127.0" prefHeight="31.0" prefWidth="216.0" promptText="Enter Account Number " />
+                              <JFXButton fx:id="DepostiSearchButton" layoutX="657.0" layoutY="118.0" onAction="#OnDepostiSearch" prefHeight="40.0" prefWidth="88.0" stylesheets="@../Login/banklogin.css" text="Search " textFill="#f50a0a">
+                                 <font>
+                                    <Font name="System Bold" size="17.0" />
+                                 </font>
+                              </JFXButton>
+                              <Label layoutX="207.0" layoutY="204.0" prefHeight="32.0" prefWidth="146.0" text="Name" />
+                              <Label layoutX="207.0" layoutY="329.0" prefHeight="32.0" prefWidth="146.0" text="Available Balance" />
+                              <Label layoutX="207.0" layoutY="244.0" prefHeight="32.0" prefWidth="146.0" text="Gender" />
+                              <JFXTextField fx:id="depositMob" editable="false" layoutX="406.0" layoutY="290.0" prefHeight="31.0" prefWidth="502.0" />
+                              <JFXTextField fx:id="depositAvailBal" editable="false" layoutX="406.0" layoutY="329.0" prefHeight="31.0" prefWidth="502.0" />
+                              <JFXTextField fx:id="depositGender" editable="false" layoutX="406.0" layoutY="244.0" prefHeight="31.0" prefWidth="502.0" />
+                              <Label layoutX="207.0" layoutY="289.0" prefHeight="32.0" prefWidth="146.0" text="Mobile no." />
+                              <JFXTextField fx:id="depositName" editable="false" layoutX="406.0" layoutY="204.0" prefHeight="31.0" prefWidth="502.0" />
+                              <Label layoutX="207.0" layoutY="371.0" prefHeight="32.0" prefWidth="146.0" text="Amount to be deposit" />
+                              <JFXTextField fx:id="DepositAmt" layoutX="406.0" layoutY="371.0" prefHeight="31.0" prefWidth="502.0" />
+                              <Label layoutX="207.0" layoutY="413.0" prefHeight="32.0" prefWidth="146.0" text="Total Amount" />
+                              <JFXTextField fx:id="depositTotal" editable="false" layoutX="406.0" layoutY="413.0" prefHeight="31.0" prefWidth="297.0" />
+                              <JFXButton fx:id="DepositClearButton" layoutX="406.0" layoutY="483.0" onAction="#OnDepositClear" prefHeight="40.0" prefWidth="202.0" stylesheets="@../Login/banklogin.css" text="Clear" textFill="#f50a0a">
+                                 <font>
+                                    <Font name="System Bold" size="17.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton fx:id="depositButton" layoutX="706.0" layoutY="483.0" onAction="#OnDeposit" prefHeight="40.0" prefWidth="202.0" stylesheets="@../Login/banklogin.css" text="Deposit" textFill="#f50a0a">
+                                 <font>
+                                    <Font name="System Bold" size="17.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton fx:id="DepostiCalculate" layoutX="719.0" layoutY="409.0" onAction="#OnDepostiCalculate" prefHeight="40.0" prefWidth="116.0" stylesheets="@../Login/banklogin.css" text="Calculate" textFill="#f50a0a">
+                                 <font>
+                                    <Font name="System Bold" size="17.0" />
+                                 </font>
+                              </JFXButton>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab text="WithDraw">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="376.0" layoutY="33.0" text="WithDraw Menu">
+                                 <font>
+                                    <Font name="System Bold Italic" size="37.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField fx:id="with_acc" labelFloat="true" layoutX="393.0" layoutY="108.0" prefHeight="31.0" prefWidth="216.0" promptText="Enter Account Number " />
+                              <JFXButton fx:id="withdrawSearch" layoutX="661.0" layoutY="103.0" onAction="#OnWithdrawSearch" prefHeight="40.0" prefWidth="88.0" stylesheets="@../Login/banklogin.css" text="Search " textFill="#f50a0a">
+                                 <font>
+                                    <Font name="System Bold" size="17.0" />
+                                 </font>
+                              </JFXButton>
+                              <Label layoutX="215.0" layoutY="196.0" prefHeight="32.0" prefWidth="165.0" text="Name" />
+                              <Label layoutX="212.0" layoutY="336.0" prefHeight="32.0" prefWidth="168.0" text="Available Balance" />
+                              <Label layoutX="214.0" layoutY="243.0" prefHeight="32.0" prefWidth="166.0" text="Gender" />
+                              <JFXTextField fx:id="withAvailBal" editable="false" layoutX="393.0" layoutY="337.0" prefHeight="31.0" prefWidth="502.0" />
+                              <JFXTextField fx:id="withMob" editable="false" layoutX="393.0" layoutY="290.0" prefHeight="31.0" prefWidth="502.0" />
+                              <JFXTextField fx:id="WithGender" editable="false" layoutX="393.0" layoutY="244.0" prefHeight="31.0" prefWidth="502.0" />
+                              <Label layoutX="214.0" layoutY="289.0" prefHeight="32.0" prefWidth="166.0" text="Mobile no." />
+                              <JFXTextField fx:id="WithName" editable="false" layoutX="393.0" layoutY="188.0" prefHeight="31.0" prefWidth="502.0" />
+                              <Label layoutX="209.0" layoutY="386.0" prefHeight="32.0" prefWidth="171.0" text="Amount to be WithDraw" />
+                              <JFXTextField fx:id="withbal" layoutX="393.0" layoutY="387.0" prefHeight="31.0" prefWidth="502.0" />
+                              <Label layoutX="209.0" layoutY="438.0" prefHeight="32.0" prefWidth="171.0" text="Total Balance" />
+                              <JFXTextField fx:id="withtotalbal" editable="false" layoutX="393.0" layoutY="439.0" prefHeight="31.0" prefWidth="225.0" />
+                              <JFXButton fx:id="withCalculate" layoutX="644.0" layoutY="435.0" onAction="#OnwithCalculate" prefHeight="40.0" prefWidth="102.0" stylesheets="@../Login/banklogin.css" text="Calculate" textFill="#f50a0a">
+                                 <font>
+                                    <Font name="System Bold" size="17.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton fx:id="withClearButton" layoutX="393.0" layoutY="502.0" onAction="#OnwithClear" prefHeight="40.0" prefWidth="200.0" stylesheets="@../Login/banklogin.css" text="Clear" textFill="#f50a0a">
+                                 <font>
+                                    <Font name="System Bold" size="17.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton fx:id="withDrawButton" layoutX="695.0" layoutY="502.0" onAction="#OnwithDraw" prefHeight="40.0" prefWidth="200.0" stylesheets="@../Login/banklogin.css" text="WithDraw " textFill="#f50a0a">
+                                 <font>
+                                    <Font name="System Bold" size="17.0" />
+                                 </font>
+                              </JFXButton>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Transfer">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="411.0" layoutY="24.0" text="Transfer Menu">
+                                 <font>
+                                    <Font name="System Bold Italic" size="37.0" />
+                                 </font>
+                              </Label>
+                              <AnchorPane layoutX="14.0" layoutY="114.0" prefHeight="381.0" prefWidth="506.0" style="-fx-background-color: grey;">
+                                 <children>
+                                    <Label layoutX="121.0" layoutY="14.0" text="Transfer From">
+                                       <font>
+                                          <Font name="System Bold Italic" size="37.0" />
+                                       </font>
+                                    </Label>
+                                    <JFXTextField fx:id="transferFrom" layoutX="177.0" layoutY="82.0" prefHeight="31.0" prefWidth="190.0" promptText="Enter Acc Number" style="-fx-background-color: White;" />
+                                    <JFXButton fx:id="transFromSearch" layoutX="372.0" layoutY="81.0" onAction="#OnfromSearchButton" stylesheets="@../Login/banklogin.css" text="Search" />
+                                    <Label layoutX="34.0" layoutY="138.0" prefHeight="32.0" prefWidth="125.0" text="Name" />
+                                    <JFXTextField fx:id="fromName" layoutX="177.0" layoutY="139.0" prefHeight="31.0" prefWidth="258.0" style="-fx-background-color: White;" />
+                                    <Label layoutX="24.0" layoutY="180.0" prefHeight="32.0" prefWidth="123.0" text="Available Balance" />
+                                    <JFXTextField fx:id="fromAvail" layoutX="177.0" layoutY="181.0" prefHeight="31.0" prefWidth="258.0" style="-fx-background-color: White;" />
+                                    <Label layoutX="24.0" layoutY="229.0" prefHeight="32.0" prefWidth="123.0" text="Transfer Amount" />
+                                    <JFXTextField fx:id="transferAmt" layoutX="177.0" layoutY="236.0" prefHeight="31.0" prefWidth="164.0" style="-fx-background-color: White;" />
+                                    <Label layoutX="15.0" layoutY="313.0" prefHeight="32.0" prefWidth="164.0" text="Balance After Transfer" />
+                                    <JFXTextField fx:id="AfterTransferFrom" editable="false" layoutX="177.0" layoutY="313.0" prefHeight="31.0" prefWidth="262.0" style="-fx-background-color: White;" />
+                                    <JFXButton fx:id="calculateFrom" layoutX="347.0" layoutY="235.0" onAction="#fromCalculate" prefHeight="33.0" prefWidth="83.0" stylesheets="@../Login/banklogin.css" text="Calculate" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="536.0" layoutY="114.0" prefHeight="379.0" prefWidth="506.0" style="-fx-background-color: grey;">
+                                 <children>
+                                    <Label layoutX="141.0" layoutY="14.0" text="Transfer To">
+                                       <font>
+                                          <Font name="System Bold Italic" size="37.0" />
+                                       </font>
+                                    </Label>
+                                    <JFXTextField fx:id="transferTo" layoutX="210.0" layoutY="77.0" prefHeight="31.0" prefWidth="190.0" promptText="Enter Acc Number" style="-fx-background-color: White;" />
+                                    <JFXButton fx:id="toSearchButton" layoutX="401.0" layoutY="76.0" onAction="#OnToSearchButton" stylesheets="@../Login/banklogin.css" text="Search" />
+                                    <Label layoutX="70.0" layoutY="141.0" prefHeight="32.0" prefWidth="112.0" text="Name" />
+                                    <JFXTextField fx:id="toName" layoutX="210.0" layoutY="142.0" prefHeight="31.0" prefWidth="258.0" style="-fx-background-color: White;" />
+                                    <Label layoutX="65.0" layoutY="188.0" prefHeight="32.0" prefWidth="123.0" text="Available Balance" />
+                                    <JFXTextField fx:id="toAvail" layoutX="210.0" layoutY="188.0" prefHeight="31.0" prefWidth="258.0" style="-fx-background-color: White;" />
+                                    <Label layoutX="59.0" layoutY="314.0" prefHeight="32.0" prefWidth="164.0" text="Balance After Transfer" />
+                                    <JFXTextField fx:id="AfterTransferTo" editable="false" layoutX="210.0" layoutY="314.0" prefHeight="31.0" prefWidth="264.0" style="-fx-background-color: White;" />
+                                 </children>
+                              </AnchorPane>
+                              <JFXButton fx:id="transferClear" layoutX="302.0" layoutY="524.0" onAction="#OntransferClear" prefHeight="40.0" prefWidth="219.0" stylesheets="@../Login/banklogin.css" text="Clear" />
+                              <JFXButton fx:id="transferSubmit" layoutX="537.0" layoutY="524.0" onAction="#OntransferSubmit" prefHeight="40.0" prefWidth="219.0" stylesheets="@../Login/banklogin.css" text="Transfer" />
+                           </children></AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="New Customer">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="292.0" layoutY="14.0" text="New Customer Account">
+                                 <font>
+                                    <Font name="System Bold Italic" size="37.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField fx:id="customerAcc" editable="false" layoutX="183.0" layoutY="101.0" prefHeight="31.0" prefWidth="690.0" promptText="Account Number" />
+                              <JFXTextField fx:id="customerName" layoutX="181.0" layoutY="132.0" prefHeight="31.0" prefWidth="694.0" promptText="Enter Name" />
+                              <JFXTextField fx:id="customerDob" layoutX="183.0" layoutY="163.0" prefHeight="31.0" prefWidth="690.0" promptText="Enter Date Of Birth" />
+                              <JFXTextField fx:id="customerPin" layoutX="183.0" layoutY="194.0" prefHeight="31.0" prefWidth="694.0" promptText="Enter new Pin" />
+                              <JFXTextField fx:id="CustomerAccType" layoutX="185.0" layoutY="225.0" prefHeight="31.0" prefWidth="690.0" promptText="Enter Account Type" />
+                              <JFXTextField fx:id="CustomerNationality" layoutX="185.0" layoutY="256.0" prefHeight="31.0" prefWidth="694.0" promptText="Enter Nationality" />
+                              <JFXTextField fx:id="CustomerCaste" layoutX="187.0" layoutY="287.0" prefHeight="31.0" prefWidth="690.0" promptText="Enter Caste" />
+                              <JFXTextField fx:id="CustomerGender" layoutX="185.0" layoutY="318.0" prefHeight="31.0" prefWidth="694.0" promptText="Enter Gender" />
+                              <JFXTextField fx:id="CustomerMobile" layoutX="187.0" layoutY="349.0" prefHeight="31.0" prefWidth="694.0" promptText="Enter Mobile" />
+                              <JFXTextField fx:id="CustomerAddress" layoutX="189.0" layoutY="380.0" prefHeight="31.0" prefWidth="690.0" promptText="Enter Address" />
+                              <JFXTextField fx:id="customerQues" layoutX="189.0" layoutY="411.0" prefHeight="31.0" prefWidth="694.0" promptText="Enter Any question here, and answer it below ." />
+                              <JFXTextField fx:id="CustomerAns" layoutX="191.0" layoutY="442.0" prefHeight="31.0" prefWidth="690.0" promptText="Answer" />
+                              <JFXTextField fx:id="customerBalance" layoutX="189.0" layoutY="473.0" prefHeight="31.0" prefWidth="694.0" promptText="Enter new Deposit" />
+                              <JFXButton fx:id="customerClear" layoutX="292.0" layoutY="524.0" onAction="#OnCustomerClear" prefHeight="40.0" prefWidth="187.0" stylesheets="@../Login/banklogin.css" text="Clear" />
+                              <JFXButton fx:id="submitButton1" layoutX="521.0" layoutY="524.0" onAction="#OnCustomerSubmit1" prefHeight="40.0" prefWidth="187.0" stylesheets="@../Login/banklogin.css" text="Submit" />
+                           </children></AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Customer List">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="387.0" layoutY="14.0" text="Customer List">
+                                 <font>
+                                    <Font name="System Bold Italic" size="37.0" />
+                                 </font>
+                              </Label>
+                              <TableView fx:id="table" layoutX="4.0" layoutY="95.0" prefHeight="541.0" prefWidth="1048.0">
+                                <columns>
+                                  <TableColumn fx:id="col_acc" prefWidth="92.0" text="Acc" />
+                                  <TableColumn fx:id="col_name" prefWidth="128.0" text="Name" />
+                                    <TableColumn fx:id="col_dob" minWidth="0.0" prefWidth="94.0" text="Dob" />
+                                    <TableColumn fx:id="col_acc_type" minWidth="0.0" prefWidth="85.0" text="Acc type" />
+                                    <TableColumn fx:id="col_Nationality" prefWidth="97.0" text="Nationality" />
+                                    <TableColumn fx:id="col_gender" minWidth="0.0" prefWidth="70.0" text="Gender" />
+                                    <TableColumn fx:id="col_caste" prefWidth="77.0" text="Caste" />
+                                    <TableColumn fx:id="col_mobile" minWidth="0.0" text="Mobile" />
+                                    <TableColumn fx:id="col_address" prefWidth="107.0" text="Address" />
+                                    <TableColumn fx:id="col_ques" minWidth="0.0" prefWidth="217.0" text="Security Question" />
+                                </columns>
+                              </TableView>
+                           </children></AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="View Balance">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <JFXTextField fx:id="viewAcc" labelFloat="true" layoutX="403.0" layoutY="104.0" prefHeight="31.0" prefWidth="260.0" promptText="Enter Account Number " />
+                              <JFXButton fx:id="ViewBalanceSearch" layoutX="693.0" layoutY="99.0" onAction="#OnviewSearchButton" prefHeight="40.0" prefWidth="88.0" stylesheets="@../Login/banklogin.css" text="Search " textFill="#f50a0a">
+                                 <font>
+                                    <Font name="System Bold" size="17.0" />
+                                 </font>
+                              </JFXButton>
+                              <Label layoutX="403.0" layoutY="31.0" text="View Balance">
+                                 <font>
+                                    <Font name="System Bold Italic" size="37.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="viewName" layoutX="231.0" layoutY="174.0" prefHeight="34.0" prefWidth="135.0" text="Name" />
+                              <JFXTextField fx:id="viewName1" editable="false" layoutX="403.0" layoutY="176.0" prefHeight="31.0" prefWidth="378.0" />
+                              <Label fx:id="view" layoutX="231.0" layoutY="224.0" prefHeight="34.0" prefWidth="133.0" text="Phone Number " />
+                              <JFXTextField fx:id="ViewPhone" editable="false" layoutX="401.0" layoutY="226.0" prefHeight="31.0" prefWidth="378.0" />
+                              <Label fx:id="viewName2" layoutX="236.0" layoutY="318.0" prefHeight="34.0" prefWidth="130.0" text="Your Balance is :" />
+                              <JFXTextField fx:id="viewBalance" editable="false" layoutX="403.0" layoutY="270.0" prefHeight="31.0" prefWidth="378.0">
+                                 <font>
+                                    <Font name="System Bold Italic" size="45.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXButton fx:id="viewClear" layoutX="497.0" layoutY="435.0" onAction="#OnViewClear" prefHeight="40.0" prefWidth="173.0" stylesheets="@../Login/banklogin.css" text="Clear" textFill="#f50a0a">
+                                 <font>
+                                    <Font name="System Bold" size="17.0" />
+                                 </font>
+                              </JFXButton>
+                           </children></AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="ChangePin">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="443.0" layoutY="14.0" text="Change Pin">
+                                 <font>
+                                    <Font name="System Bold Italic" size="37.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField fx:id="pinAcc" labelFloat="true" layoutX="379.0" layoutY="96.0" prefHeight="31.0" prefWidth="249.0" promptText="Enter Account Number " />
+                              <JFXButton fx:id="pinSearch" layoutX="669.0" layoutY="91.0" onAction="#onPinSearch" prefHeight="40.0" prefWidth="88.0" stylesheets="@../Login/banklogin.css" text="Search " textFill="#f50a0a">
+                                 <font>
+                                    <Font name="System Bold" size="17.0" />
+                                 </font>
+                              </JFXButton>
+                              <Label fx:id="viewName3" layoutX="226.0" layoutY="168.0" prefHeight="34.0" prefWidth="135.0" text="Name" />
+                              <JFXTextField fx:id="PinPhone" editable="false" layoutX="379.0" layoutY="225.0" prefHeight="31.0" prefWidth="378.0" />
+                              <Label fx:id="view1" layoutX="226.0" layoutY="224.0" prefHeight="34.0" prefWidth="133.0" text="Phone Number " />
+                              <JFXTextField fx:id="PinName" editable="false" layoutX="379.0" layoutY="168.0" prefHeight="31.0" prefWidth="378.0" />
+                              <Label layoutX="226.0" layoutY="276.0" prefHeight="34.0" prefWidth="135.0" text="Old Pin" />
+                              <JFXTextField fx:id="pinNew" layoutX="379.0" layoutY="333.0" prefHeight="31.0" prefWidth="378.0" />
+                              <Label fx:id="view11" layoutX="226.0" layoutY="332.0" prefHeight="34.0" prefWidth="133.0" text="New Pin" />
+                              <JFXTextField fx:id="pinOld" layoutX="379.0" layoutY="276.0" prefHeight="31.0" prefWidth="378.0" />
+                              <JFXTextField fx:id="pinRenew" layoutX="375.0" layoutY="388.0" prefHeight="31.0" prefWidth="378.0" />
+                              <Label fx:id="view111" layoutX="222.0" layoutY="387.0" prefHeight="34.0" prefWidth="133.0" text="Re-enter New Pin" />
+                              <JFXButton fx:id="pinClear" layoutX="379.0" layoutY="472.0" onAction="#OnPinClear" prefHeight="40.0" prefWidth="160.0" stylesheets="@../Login/banklogin.css" text="Clear" textFill="#f50a0a">
+                                 <font>
+                                    <Font name="System Bold" size="17.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton fx:id="pinSubmit" layoutX="602.0" layoutY="472.0" onAction="#OnPinSubmit" prefHeight="40.0" prefWidth="155.0" stylesheets="@../Login/banklogin.css" text="Submit" textFill="#f50a0a">
+                                 <font>
+                                    <Font name="System Bold" size="17.0" />
+                                 </font>
+                              </JFXButton>
+                           </children></AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Developer">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="538.0" layoutY="28.0" text="Developer Details">
+                                 <font>
+                                    <Font name="System Bold Italic" size="37.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="375.0" fitWidth="312.0" layoutX="50.0" layoutY="122.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../image/developer.jpg" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="480.0" layoutY="130.0" prefHeight="31.0" prefWidth="116.0" text="NAME" />
+                              <JFXTextField editable="false" layoutX="671.0" layoutY="122.0" prefHeight="31.0" prefWidth="288.0" promptText="Shivam Sharma">
+                                 <font>
+                                    <Font name="System Bold Italic" size="27.0" />
+                                 </font>
+                              </JFXTextField>
+                              <Label layoutX="476.0" layoutY="217.0" prefHeight="32.0" prefWidth="104.0" text="Mobile number" />
+                              <Label layoutX="476.0" layoutY="297.0" prefHeight="32.0" prefWidth="104.0" text="Email id" />
+                              <Label layoutX="476.0" layoutY="375.0" prefHeight="32.0" prefWidth="104.0" text="Github link" />
+                              <JFXTextField layoutX="671.0" layoutY="207.0" prefHeight="31.0" prefWidth="288.0" promptText="9808256008">
+                                 <font>
+                                    <Font name="System Bold Italic" size="24.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXTextField layoutX="671.0" layoutY="305.0" prefHeight="31.0" prefWidth="288.0" promptText="Bloggershivam851@gmail.com">
+                                 <font>
+                                    <Font name="System Bold Italic" size="18.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXTextField layoutX="671.0" layoutY="387.0" prefHeight="31.0" prefWidth="288.0" promptText="https://github.com/shivam851">
+                                 <font>
+                                    <Font name="System Bold Italic" size="18.0" />
+                                 </font>
+                              </JFXTextField>
+                           </children></AnchorPane>
+                     </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
